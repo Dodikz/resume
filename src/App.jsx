@@ -7,7 +7,7 @@ function App() {
     <div className="app">
       <Router>
         <Navbar />
-        <div className="page-content mt-16">
+        <div className="page-content">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>

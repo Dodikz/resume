@@ -164,6 +164,11 @@ const CardNav = ({
             />
             <div
               className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${
+                isHamburgerOpen ? "opacity-0 hidden" : ""
+              } group-hover:opacity-75 group-hidden:opacity-0`}
+            />
+            <div
+              className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${
                 isHamburgerOpen ? "-translate-y-[4px] -rotate-45" : ""
               } group-hover:opacity-75`}
             />
@@ -175,10 +180,10 @@ const CardNav = ({
 
           <button
             type="button"
-            className="card-nav-cta-button items-center justify-center hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-medium cursor-pointer transition-colors duration-300"
+            className="card-nav-cta-button items-center justify-center hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-semibold cursor-pointer transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
-            Get Started
+            Contact Me
           </button>
         </div>
 
@@ -198,7 +203,7 @@ const CardNav = ({
               style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
               <div className="nav-card-label font-normal tracking-[-0.5px] text-[18px] md:text-[22px]">
-                {item.label}  
+                {item.label}
               </div>
               <div className="nav-card-links mt-auto flex flex-col gap-[2px]">
                 {item.links?.map((lnk, i) => (
